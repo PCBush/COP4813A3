@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time of Day Image</title>
+    </head>
+    <body>
+        <h1>Ryan Bush</h1>
+        <p>Course: Web Applications Programming</p>
+        <p>Major: Computer Science</p>
+        <p>Hello and welcome to my dynamic webpage!</p>
+
+        <div id="imageContainer">
+            <img id="image">
+        </div>
+
+        <script>
+            const hour = new Date().getHours();
+            let image;
+            
+            if (hour >= 6 && hour < 12) image = "morning.jpg";  // morning 
+            else if (hour >= 12 && hour < 18) image = "afternoon.jpg"; // afternoon 
+            else image = "night.jpg"; // evening night 
+            
+            document.getElementById("image").src = image;
+        </script>
+    </body>
+</html>
